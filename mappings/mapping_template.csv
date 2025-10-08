@@ -1,0 +1,2 @@
+ID,Label,Related Match,Close Match,Exact Match,Narrow Match,Broad Match
+ID,LABEL,AI skos:relatedMatch SPLIT=|,AI skos:closeMatch SPLIT=|,AI skos:exactMatch SPLIT=|,AI skos:narrowMatch SPLIT=|,AI skos:broadMatch SPLIT=|

@@ -1,0 +1,188 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "iao": "http://purl.obolibrary.org/obo/",
+    "dct": "http://purl.org/dc/terms/",
+    "schema": "http://schema.org/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "label": "rdfs:label",
+    "comment": "rdfs:comment",
+    "altLabel": {
+      "@id": "skos:altLabel",
+      "@container": "@set"
+    },
+    "definition": "iao:IAO_0000115",
+    "source": "iao:IAO_0000119",
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@container": "@set"
+    },
+    "hasSubClass": {
+      "@reverse": "rdfs:subClassOf",
+      "@container": "@set"
+    },
+    "equivalentClass": {
+      "@id": "owl:equivalentClass",
+      "@container": "@set"
+    },
+    "onProperty": "owl:onProperty",
+    "someValuesFrom": "owl:someValuesFrom",
+    "intersectionOf": {
+      "@id": "owl:intersectionOf",
+      "@container": "@list"
+    },
+    "subPropertyOf": {
+      "@id": "rdfs:subPropertyOf",
+      "@container": "@set"
+    },
+    "hasSubProperty": {
+      "@reverse": "rdfs:subPropertyOf",
+      "@container": "@set"
+    },
+    "domain": "rdfs:domain",
+    "range": "rdfs:range",
+    "seeAlso": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id"
+    },
+    "versionInfo": "owl:versionInfo",
+    "created": "dct:created",
+    "license": {
+      "@id": "dct:license",
+      "@type": "@id"
+    },
+    "name": "schema:name",
+    "creator": "dct:creator",
+    "personName": "foaf:name",
+    "affiliation": "schema:affiliation",
+    "homepage": {
+      "@id": "foaf:homepage",
+      "@type": "@id"
+    }
+  },
+  "id": "http://purl.org/pan-science/PaNET/PaNET.owl",
+  "type": "owl:Ontology",
+  "created": "2025-10-21",
+  "creator": [
+    {
+      "type": "foaf:Person",
+      "affiliation": {
+        "seeAlso": null,
+        "homepage": "https://stfc.ukri.org/",
+        "personName": "Science and Technology Facilities Council"
+      },
+      "seeAlso": "https://orcid.org/0000-0003-3499-8262",
+      "personName": "Alejandra Gonzalez-Beltran"
+    },
+    {
+      "type": "foaf:Person",
+      "affiliation": {
+        "seeAlso": null,
+        "homepage": null,
+        "personName": "German Engineering Materials Science Centre (GEMS) at Heinz Maier-Leibnitz Zentrum (MLZ), Helmholtz-Zentrum Hereon"
+      },
+      "seeAlso": "https://orcid.org/0000-0003-4049-4060",
+      "personName": "Arnab Majumdar"
+    },
+    {
+      "type": "foaf:Person",
+      "affiliation": null,
+      "seeAlso": null,
+      "personName": "D. Iyayi"
+    },
+    {
+      "type": "foaf:Person",
+      "affiliation": null,
+      "seeAlso": null,
+      "personName": "G.Koumoutsos"
+    },
+    {
+      "type": "foaf:Person",
+      "affiliation": null,
+      "seeAlso": "https://orcid.org/0000-0001-9121-8643",
+      "personName": "H. Gorzig"
+    },
+    {
+      "type": "foaf:Person",
+      "affiliation": {
+        "seeAlso": "https://ror.org/01js2sh04",
+        "homepage": "https://desy.de/",
+        "personName": "Deutsches Elektronen-Synchrotron DESY"
+      },
+      "seeAlso": "https://orcid.org/0000-0002-5850-4469",
+      "personName": "Melanie Nentwich"
+    },
+    {
+      "type": "foaf:Person",
+      "affiliation": {
+        "seeAlso": "https://ror.org/01js2sh04",
+        "homepage": "https://desy.de/",
+        "personName": "Deutsches Elektronen-Synchrotron DESY"
+      },
+      "seeAlso": "https://orcid.org/0000-0002-3957-1279",
+      "personName": "Paul Millar"
+    },
+    {
+      "type": "foaf:Person",
+      "affiliation": {
+        "seeAlso": "https://ror.org/02aj13c28",
+        "homepage": "https://www.helmholtz-berlin.de/",
+        "personName": "Helmholtz-Zentrum Berlin für Materialien und Energie"
+      },
+      "seeAlso": "https://orcid.org/0000-0002-1266-3819",
+      "personName": "Rolf Krahl"
+    },
+    {
+      "type": "foaf:Person",
+      "affiliation": null,
+      "seeAlso": null,
+      "personName": "S. Da Graca Ramos"
+    },
+    {
+      "type": "foaf:Person",
+      "affiliation": null,
+      "seeAlso": "https://orcid.org/0000-0001-5120-0764",
+      "personName": "S. P. Collins"
+    },
+    {
+      "type": "foaf:Person",
+      "affiliation": {
+        "seeAlso": null,
+        "homepage": null,
+        "personName": "German Engineering Materials Science Centre (GEMS) at Heinz Maier-Leibnitz Zentrum (MLZ), Helmholtz-Zentrum Hereon"
+      },
+      "seeAlso": "https://orcid.org/0000-0002-9815-909X",
+      "personName": "Sebastian Busch"
+    },
+    {
+      "type": "foaf:Person",
+      "affiliation": [
+        {
+          "seeAlso": "https://ror.org/05etxs293",
+          "homepage": "https://www.diamond.ac.uk/",
+          "personName": "Diamond Light Source"
+        },
+        {
+          "seeAlso": "https://ror.org/052gg0110",
+          "homepage": "https://www.ox.ac.uk/",
+          "personName": "University of Oxford"
+        }
+      ],
+      "seeAlso": "https://orcid.org/0009-0008-7829-3647",
+      "personName": "Terence Tan"
+    }
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "dct:title": "The Photon and Neutron Experimental Techniques Ontology",
+  "http://purl.org/vocab/vann/preferredNamespacePrefix": "panet",
+  "http://purl.org/vocab/vann/preferredNamespaceUri": {
+    "id": "http://purl.org/pan-science/PaNET/"
+  },
+  "name": "The Photon and Neutron Experimental Techniques Ontology",
+  "comment": "Photon and Neutron Experimental Techniques: An ontology of  techniques within the photon and neutron (PaN) domain.\n\nPurpose\n\nThe main purpose of this ontology is to provide a controlled vocabulary, global PIDs and annotations \nfor photon and neutron techniques, to support PaN FAIR data catalogue functionality.\n\nDesign philosophy\n\nIn the original version of the ontology, everything is a class and all classes are techniques. Object property relations\nare implied but not formalized in this version. Subclass/superclass relationships and intersections are \nused to define specific technique classes in terms of broader superclasses. This is seen as a key\nrequirement in order to carry out catalogue searcher for broader concepts, for example.\n\nThe ontology has since been restrucred to include both technique classes and specifier classes. The relationships between the two are also made explicit and formalized in the form of Object Properties. The specifier classes were created by identifying technique classes that act as umbrella terms. These techniques are defined using object properties and specifiers. The rest are defined in terms of other techniques using a mix of subclass and equivalence axioms.\n\nThis project was undertaken under ExPaNDS WP3.2 (https://expands.eu/)\n\nThe ontology is can be found here: https://github.com/ExPaNDS-eu/ExPaNDS-experimental-techniques-ontology\n\nThe restructuring of the ontology is detailed in a paper: https://doi.org/10.1107/S1600577525005272\n\nPhoton and neutron PaN ontologies developed under ExPaNDS are documented here: https://doi.org/10.5281/zenodo.4806026",
+  "versionInfo": "1.3.0-48-g7011e6b"
+}

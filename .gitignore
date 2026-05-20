@@ -9,3 +9,7 @@ docs/_site
 # ignore jekyll cache
 docs/.jekyll-cache
 
+# ignore Python cache
+__pycache__/
+*.pyc
+

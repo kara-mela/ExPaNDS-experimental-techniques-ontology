@@ -100,17 +100,11 @@ title: Ontology Specification
 
 <!-- overview: classes -->
 <h3 id="overview-classes">{{ header_overview_classes }}</h3>
-{% include
-  create_overview_box.html
-  data=E.classes
-%}
+{% include create_overview_box.html source="classes" %}
 
 <!-- overview: object properties -->
 <h3 id="overview-object-properties">{{ header_overview_obj_prop }}</h3>
-{% include
-  create_overview_box.html
-  data=E.object_properties
-%}
+{% include create_overview_box.html source="object_properties" %}
 
 <!-- overview: annotation properties -->
 <h3 id="overview-annotation-properties">{{ header_overview_ann_prop }}</h3>

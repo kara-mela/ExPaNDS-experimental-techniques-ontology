@@ -1,4 +1,8 @@
-{% assign sorted_list = site.data.PaNET_classes["@graph"] %}
+{% if include.source == "object_properties" %}
+  {% assign sorted_list = site.data.PaNET_object_properties["@graph"] %}
+{% else %}
+  {% assign sorted_list = site.data.PaNET_classes["@graph"] %}
+{% endif %}
 {% assign first_letters = "" | split: "" %}
 {% for item in sorted_list %}
   {% assign first_letter = item.label | upcase | split: "" | first %}

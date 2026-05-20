@@ -2,10 +2,11 @@
   Render object property detail boxes from pre-resolved, sorted entries.
 {% endcomment %}
 
-{% for entry in include.data %}
+{% assign objprop_entries = site.data.PaNET_object_properties["@graph"] %}
+{% for entry in objprop_entries %}
   <div class="detail-box">
     <div class="detail-header">
-      <h3 class="detail-title" id="{{ entry.anchor }}">{{ entry.label }}</h3>
+      <h3 class="detail-title" id="{{ entry.id | split: '/' | last }}">{{ entry.label }}</h3>
       <p class="detail-back">Back to <a href="#toc">TOC</a></p>
     </div>
 
@@ -14,10 +15,10 @@
     <div class="detail-body">
       <p><b>IRI:</b> {{ entry.id }}</p>
 
-      {% if entry.alt_labels and entry.alt_labels.size > 0 %}
+      {% if entry.altLabel and entry.altLabel.size > 0 %}
         <p><b>Alternative label:</b></p>
         <ul>
-          {% for lbl in entry.alt_labels %}
+          {% for lbl in entry.altLabel %}
             <li>{{ lbl }}</li>
           {% endfor %}
         </ul>
@@ -36,28 +37,30 @@
       <details>
         <summary>has characteristics:</summary>
         <p>
-          {% for char in entry.characteristics %}
-            <a href="{{ char.id }}">{{ char.label }}</a>{% unless forloop.last %} {% endunless %}
+          {% for t in entry.type %}
+            {% unless t == "owl:ObjectProperty" %}
+              <a href="{{ t | replace: 'owl:', 'https://www.w3.org/2002/07/owl#' }}">{{ t | remove: "owl:" | remove: "Property" }}</a>
+            {% endunless %}
           {% endfor %}
         </p>
       </details>
 
-      {% if entry.super_properties and entry.super_properties.size > 0 %}
+      {% if entry.subPropertyOf and entry.subPropertyOf.size > 0 %}
         <details>
           <summary>has super-properties:</summary>
           <p>
-            {% for super in entry.super_properties %}
+            {% for super in entry.subPropertyOf %}
               <a href="{{ super.id }}">{{ super.label }}</a>{% unless forloop.last %} {% endunless %}
             {% endfor %}
           </p>
         </details>
       {% endif %}
 
-      {% if entry.sub_properties and entry.sub_properties.size > 0 %}
+      {% if entry.hasSubProperty and entry.hasSubProperty.size > 0 %}
         <details>
           <summary>has sub-properties:</summary>
           <p>
-            {% for sub in entry.sub_properties %}
+            {% for sub in entry.hasSubProperty %}
               <a href="{{ sub.id }}">{{ sub.label }}</a>{% unless forloop.last %} {% endunless %}
             {% endfor %}
           </p>

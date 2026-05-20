@@ -2,10 +2,11 @@
   Render class detail boxes from pre-resolved, sorted entries.
 {% endcomment %}
 
-{% for entry in include.data %}
+{% assign class_entries = site.data.PaNET_classes["@graph"] %}
+{% for entry in class_entries %}
   <div class="detail-box">
     <div class="detail-header">
-      <h3 class="detail-title" id="{{ entry.anchor }}">{{ entry.label }}</h3>
+      <h3 class="detail-title" id="{{ entry.id | split: '/' | last }}">{{ entry.label }}</h3>
       <p class="detail-back">Back to <a href="#toc">TOC</a></p>
     </div>
 
@@ -14,10 +15,10 @@
     <div class="detail-body">
       <p><b>IRI:</b> {{ entry.id }}</p>
 
-      {% if entry.alt_labels and entry.alt_labels.size > 0 %}
+      {% if entry.altLabel and entry.altLabel.size > 0 %}
         <p><b>Alternative label:</b></p>
         <ul>
-          {% for lbl in entry.alt_labels %}
+          {% for lbl in entry.altLabel %}
             <li>{{ lbl }}</li>
           {% endfor %}
         </ul>
@@ -33,17 +34,17 @@
     </div>
 
     <div class="footer-box">
-      {% if entry.equivalent_to and entry.equivalent_to.size > 0 %}
+      {% if entry.equivalentClass and entry.equivalentClass.size > 0 %}
         <details>
           <summary>is equivalent to:</summary>
-          {% for eq in entry.equivalent_to %}
+          {% for eq in entry.equivalentClass %}
             <p>
-              {% if eq.kind == "restriction" %}
-                <a href="{{ eq.property.id }}">{{ eq.property.label }}</a>
+              {% if eq.type == "owl:Restriction" %}
+                <a href="{{ eq.onProperty.id }}">{{ eq.onProperty.label }}</a>
                 SOME
-                <a href="{{ eq.some_values_from.id }}">{{ eq.some_values_from.label }}</a>
-              {% elsif eq.kind == "intersection" %}
-                {% for member in eq.members %}
+                <a href="{{ eq.someValuesFrom.id }}">{{ eq.someValuesFrom.label }}</a>
+              {% elsif eq.intersectionOf and eq.intersectionOf.size > 0 %}
+                {% for member in eq.intersectionOf %}
                   <a href="{{ member.id }}">{{ member.label }}</a>{% unless forloop.last %} AND {% endunless %}
                 {% endfor %}
               {% endif %}
@@ -52,22 +53,22 @@
         </details>
       {% endif %}
 
-      {% if entry.super_classes and entry.super_classes.size > 0 %}
+      {% if entry.subClassOf and entry.subClassOf.size > 0 %}
         <details>
           <summary>has super-classes:</summary>
           <p>
-            {% for super in entry.super_classes %}
+            {% for super in entry.subClassOf %}
               <a href="{{ super.id }}">{{ super.label }}</a>{% unless forloop.last %} {% endunless %}
             {% endfor %}
           </p>
         </details>
       {% endif %}
 
-      {% if entry.sub_classes and entry.sub_classes.size > 0 %}
+      {% if entry.hasSubClass and entry.hasSubClass.size > 0 %}
         <details>
           <summary>has sub-classes:</summary>
           <p>
-            {% for sub in entry.sub_classes %}
+            {% for sub in entry.hasSubClass %}
               <a href="{{ sub.id }}">{{ sub.label }}</a>{% unless forloop.last %} {% endunless %}
             {% endfor %}
           </p>

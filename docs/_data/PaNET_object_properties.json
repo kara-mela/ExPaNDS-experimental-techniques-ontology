@@ -1,0 +1,296 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "iao": "http://purl.obolibrary.org/obo/",
+    "dct": "http://purl.org/dc/terms/",
+    "schema": "http://schema.org/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "label": "rdfs:label",
+    "comment": "rdfs:comment",
+    "altLabel": {
+      "@id": "skos:altLabel",
+      "@container": "@set"
+    },
+    "definition": "iao:IAO_0000115",
+    "source": "iao:IAO_0000119",
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@container": "@set"
+    },
+    "hasSubClass": {
+      "@reverse": "rdfs:subClassOf",
+      "@container": "@set"
+    },
+    "equivalentClass": {
+      "@id": "owl:equivalentClass",
+      "@container": "@set"
+    },
+    "onProperty": "owl:onProperty",
+    "someValuesFrom": "owl:someValuesFrom",
+    "intersectionOf": {
+      "@id": "owl:intersectionOf",
+      "@container": "@list"
+    },
+    "subPropertyOf": {
+      "@id": "rdfs:subPropertyOf",
+      "@container": "@set"
+    },
+    "hasSubProperty": {
+      "@reverse": "rdfs:subPropertyOf",
+      "@container": "@set"
+    },
+    "domain": "rdfs:domain",
+    "range": "rdfs:range",
+    "seeAlso": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id"
+    },
+    "versionInfo": "owl:versionInfo",
+    "created": "dct:created",
+    "license": {
+      "@id": "dct:license",
+      "@type": "@id"
+    },
+    "name": "schema:name",
+    "creator": "dct:creator",
+    "personName": "foaf:name",
+    "affiliation": "schema:affiliation",
+    "homepage": {
+      "@id": "foaf:homepage",
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "id": "http://purl.org/pan-science/PaNET/PaNET1005000",
+      "type": [
+        "owl:ObjectProperty",
+        "owl:AsymmetricProperty",
+        "owl:IrreflexiveProperty"
+      ],
+      "definition": null,
+      "source": null,
+      "domain": {
+        "id": "http://purl.org/pan-science/PaNET/PaNET00001",
+        "type": "owl:Class",
+        "label": "photon and neutron technique"
+      },
+      "label": "definedbycharacteristic",
+      "range": {
+        "id": "http://purl.org/pan-science/PaNET/PaNET2005000",
+        "type": "owl:Class",
+        "label": "beam characteristic"
+      },
+      "subPropertyOf": [
+        {
+          "id": "http://purl.org/pan-science/PaNET/PaNET1000000",
+          "type": [
+            "owl:ObjectProperty",
+            "owl:AsymmetricProperty",
+            "owl:IrreflexiveProperty"
+          ],
+          "label": "photon and neutron technique relationships"
+        }
+      ],
+      "altLabel": []
+    },
+    {
+      "id": "http://purl.org/pan-science/PaNET/PaNET1003000",
+      "type": [
+        "owl:ObjectProperty",
+        "owl:AsymmetricProperty",
+        "owl:IrreflexiveProperty"
+      ],
+      "definition": null,
+      "source": null,
+      "domain": {
+        "id": "http://purl.org/pan-science/PaNET/PaNET00001",
+        "type": "owl:Class",
+        "label": "photon and neutron technique"
+      },
+      "label": "definedbydependence",
+      "range": {
+        "id": "http://purl.org/pan-science/PaNET/PaNET2004000",
+        "type": "owl:Class",
+        "label": "functional dependence"
+      },
+      "subPropertyOf": [
+        {
+          "id": "http://purl.org/pan-science/PaNET/PaNET1000000",
+          "type": [
+            "owl:ObjectProperty",
+            "owl:AsymmetricProperty",
+            "owl:IrreflexiveProperty"
+          ],
+          "label": "photon and neutron technique relationships"
+        }
+      ],
+      "altLabel": []
+    },
+    {
+      "id": "http://purl.org/pan-science/PaNET/PaNET1001000",
+      "type": [
+        "owl:ObjectProperty",
+        "owl:AsymmetricProperty",
+        "owl:IrreflexiveProperty"
+      ],
+      "definition": null,
+      "source": null,
+      "domain": null,
+      "label": "definedbyprobe",
+      "range": {
+        "id": "http://purl.org/pan-science/PaNET/PaNET2001000",
+        "type": "owl:Class",
+        "label": "probe"
+      },
+      "subPropertyOf": [
+        {
+          "id": "http://purl.org/pan-science/PaNET/PaNET1000000",
+          "type": [
+            "owl:ObjectProperty",
+            "owl:AsymmetricProperty",
+            "owl:IrreflexiveProperty"
+          ],
+          "label": "photon and neutron technique relationships"
+        }
+      ],
+      "altLabel": []
+    },
+    {
+      "id": "http://purl.org/pan-science/PaNET/PaNET1002000",
+      "type": [
+        "owl:ObjectProperty",
+        "owl:AsymmetricProperty",
+        "owl:IrreflexiveProperty"
+      ],
+      "definition": null,
+      "source": null,
+      "domain": {
+        "id": "http://purl.org/pan-science/PaNET/PaNET00001",
+        "type": "owl:Class",
+        "label": "photon and neutron technique"
+      },
+      "label": "definedbyprocess",
+      "range": {
+        "id": "http://purl.org/pan-science/PaNET/PaNET2003000",
+        "type": "owl:Class",
+        "label": "process"
+      },
+      "subPropertyOf": [
+        {
+          "id": "http://purl.org/pan-science/PaNET/PaNET1000000",
+          "type": [
+            "owl:ObjectProperty",
+            "owl:AsymmetricProperty",
+            "owl:IrreflexiveProperty"
+          ],
+          "label": "photon and neutron technique relationships"
+        }
+      ],
+      "altLabel": []
+    },
+    {
+      "id": "http://purl.org/pan-science/PaNET/PaNET1000000",
+      "hasSubProperty": [
+        {
+          "id": "http://purl.org/pan-science/PaNET/PaNET1001000",
+          "type": [
+            "owl:ObjectProperty",
+            "owl:AsymmetricProperty",
+            "owl:IrreflexiveProperty"
+          ],
+          "label": "definedbyprobe"
+        },
+        {
+          "id": "http://purl.org/pan-science/PaNET/PaNET1002000",
+          "type": [
+            "owl:ObjectProperty",
+            "owl:AsymmetricProperty",
+            "owl:IrreflexiveProperty"
+          ],
+          "label": "definedbyprocess"
+        },
+        {
+          "id": "http://purl.org/pan-science/PaNET/PaNET1003000",
+          "type": [
+            "owl:ObjectProperty",
+            "owl:AsymmetricProperty",
+            "owl:IrreflexiveProperty"
+          ],
+          "label": "definedbydependence"
+        },
+        {
+          "id": "http://purl.org/pan-science/PaNET/PaNET1004000",
+          "type": [
+            "owl:ObjectProperty",
+            "owl:AsymmetricProperty",
+            "owl:IrreflexiveProperty"
+          ],
+          "label": "supports"
+        },
+        {
+          "id": "http://purl.org/pan-science/PaNET/PaNET1005000",
+          "type": [
+            "owl:ObjectProperty",
+            "owl:AsymmetricProperty",
+            "owl:IrreflexiveProperty"
+          ],
+          "label": "definedbycharacteristic"
+        }
+      ],
+      "type": [
+        "owl:ObjectProperty",
+        "owl:AsymmetricProperty",
+        "owl:IrreflexiveProperty"
+      ],
+      "definition": null,
+      "source": null,
+      "domain": null,
+      "label": "photon and neutron technique relationships",
+      "range": {
+        "id": "http://purl.org/pan-science/PaNET/PaNET2000000",
+        "type": "owl:Class",
+        "label": "photon and neutron specifiers"
+      },
+      "subPropertyOf": [],
+      "altLabel": []
+    },
+    {
+      "id": "http://purl.org/pan-science/PaNET/PaNET1004000",
+      "type": [
+        "owl:ObjectProperty",
+        "owl:AsymmetricProperty",
+        "owl:IrreflexiveProperty"
+      ],
+      "definition": null,
+      "source": null,
+      "domain": {
+        "id": "http://purl.org/pan-science/PaNET/PaNET00001",
+        "type": "owl:Class",
+        "label": "photon and neutron technique"
+      },
+      "label": "supports",
+      "range": {
+        "id": "http://purl.org/pan-science/PaNET/PaNET2002000",
+        "type": "owl:Class",
+        "label": "purpose"
+      },
+      "subPropertyOf": [
+        {
+          "id": "http://purl.org/pan-science/PaNET/PaNET1000000",
+          "type": [
+            "owl:ObjectProperty",
+            "owl:AsymmetricProperty",
+            "owl:IrreflexiveProperty"
+          ],
+          "label": "photon and neutron technique relationships"
+        }
+      ],
+      "altLabel": []
+    }
+  ]
+}

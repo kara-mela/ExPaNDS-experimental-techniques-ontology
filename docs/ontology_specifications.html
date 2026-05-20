@@ -2,8 +2,7 @@
 title: Ontology Specification
 ---
 
-{% assign E = site.data.PaNET_reasoned_extended %}
-{% assign onto = E.ontology %}
+{% assign onto = site.data.PaNET_ontology %}
 
 <h1 class="title">Ontology Specifications</h1>
 
@@ -12,23 +11,25 @@ title: Ontology Specification
 
 <!-- release: revision -->
 <h3>Revision</h3>
-<p>{{ onto.version_info }}</p>
+<p>{{ onto.versionInfo }}</p>
 
 <!-- release: authors -->
 <h3>Authors</h3>
   <ul>
-    {% for entry in E.authors %}
+    {% for entry in onto.creator %}
       <li>
-        {% if entry.orcid %}
-          <a href="{{ entry.orcid }}">{{ entry.name }}</a>
+        {% if entry.seeAlso %}
+          <a href="{{ entry.seeAlso }}">{{ entry.personName }}</a>
         {% else %}
-          {{ entry.name }}
+          {{ entry.personName }}
         {% endif %}
 
-        {% if entry.affiliation and entry.affiliation.name and entry.affiliation.homepage %}
-          (<a href="{{ entry.affiliation.homepage }}">{{ entry.affiliation.name }}</a>)
-        {% elsif entry.affiliation and entry.affiliation.name %}
-          ({{ entry.affiliation.name }})
+        {% assign aff = entry.affiliation %}
+        {% if aff.first %}{% assign aff = aff.first %}{% endif %}
+        {% if aff and aff.personName and aff.homepage %}
+          (<a href="{{ aff.homepage }}">{{ aff.personName }}</a>)
+        {% elsif aff and aff.personName %}
+          ({{ aff.personName }})
         {% endif %}
       </li>
     {% endfor %}
@@ -48,8 +49,8 @@ title: Ontology Specification
 <p class="comment">To do: icon representing WebVOWL</p>
 
 <h3>Cite as</h3>
-{% assign names = E.authors | map: "name" | join: ", " %}
-<p>{{ names }}. <i>{{ onto.name }}</i>. Revision: {{ onto.version_info }}.</p>
+{% assign names = onto.creator | map: "personName" | join: ", " %}
+<p>{{ names }}. <i>{{ onto.name }}</i>. Revision: {{ onto.versionInfo }}.</p>
 
 <a href="https://github.com/pan-ontologies/PaNET">Provenance of this page</a>
 

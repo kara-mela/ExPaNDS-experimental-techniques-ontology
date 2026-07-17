@@ -1,0 +1,44 @@
+[
+    {
+        "name": "PaNET: latest release",
+        "description": "A constant link to the latest version of PaNET (unreasoned)",
+        "source_url": "https://purl.org/pan-science/PaNET/PaNET.owl",
+        "expected_status": 302,
+        "expected_location": "https://github.com/pan-ontologies/PaNET/releases/latest/download/PaNET.owl"
+    },
+    {
+        "name": "PaNET: link for mapping",
+        "description": "A (suspect?) support for a mapping",
+        "source_url": "https://purl.org/pan-science/integration/PaN-mapping",
+        "expected_status": 302,
+        "expected_location": "http://www.purl.org/pan-science/integration/PaN-mapping/0.1"
+    },
+    {
+        "name": "ESRFET: link to deliverable",
+        "description": "A (suspect?) link for ESRFET URL",
+        "source_url": "https://purl.org/pan-science/ESRFET",
+        "expected_status": 302,
+        "expected_location": "https://github.com/pan-ontologies/esrf-ontologies/tree/oscars-deliverable-31-12-2024"
+    },
+    {
+        "name": "PaNET: documentation",
+        "description": "Documentation of the latest version of PaNET.",
+        "source_url": "https://purl.org/pan-science/PaNET/",
+        "expected_status": 302,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/index-en.html"
+    },
+    {
+        "name": "PaNET: documentation anchor",
+        "description": "An anchor in documentation of the latest version of PaNET.",
+        "source_url": "https://purl.org/pan-science/PaNET/foo",
+        "expected_status": 302,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/index-en.html#foo"
+    },
+    {
+        "name": "PaNET: document for IRI",
+        "description": "An anchor in documentation of a PaNET IRI.",
+        "source_url": "https://purl.org/pan-science/PaNET/PaNET0001",
+        "expected_status": 302,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/index-en.html#PaNET0001"
+    }
+]

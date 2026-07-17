@@ -1,0 +1,178 @@
+[
+    {
+        "name": "w3id canary",
+        "description": "An example redirection, maintained by w3id, that we use to verify the test framework itself.",
+        "source_url": "/examples/simple/",
+        "expected_status": 302,
+        "expected_location": "https://example.com/"
+    },
+
+    {
+        "name": "PaNET latest: download RDF/XML",
+        "description": "Download the latest RDF/XML version of PaNET.",
+        "source_url": "/PaN/PaNET/latest/PaNET.owl",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/latest/ontology.owl"
+    },
+    {
+        "name": "PaNET latest: download RDF/XML (reasoned)",
+        "description": "Download the latest RDF/XML version of PaNET that includes inferred axions.",
+        "source_url": "/PaN/PaNET/latest/PaNET_reasoned.owl",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/latest/ontology_reasoned.owl"
+    },
+    {
+        "name": "PaNET latest: download Turtle",
+        "description": "Download the latest Turtle version of PaNET.",
+        "source_url": "/PaN/PaNET/latest/PaNET.ttl",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/latest/ontology.ttl"
+    },
+    {
+        "name": "PaNET latest: download N3",
+        "description": "Download the latest Notation3 version of PaNET.",
+        "source_url": "/PaN/PaNET/latest/PaNET.n3",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/latest/ontology.n3"
+    },
+    {
+        "name": "PaNET latest: download JSON-LD",
+        "description": "Download the latest JSON Linked Data version of PaNET.",
+        "source_url": "/PaN/PaNET/latest/PaNET.jsonld",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/latest/ontology.jsonld"
+    },
+
+    {
+        "name": "PaNET latest: docs",
+        "description": "The documentation for the latest release of PaNET",
+        "source_url": "/PaN/PaNET",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/index-en.html"
+    },
+    {
+        "name": "PaNET latest: docs with slash",
+        "description": "The documentation for the latest release of PaNET, with trailing slash",
+        "source_url": "/PaN/PaNET/",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/index-en.html"
+    },
+
+    {
+        "name": "PaNET latest: IRI, RDF/XML",
+        "description": "The RDF/XML description of an IRI within the latest release of PaNET.",
+        "source_url": "/PaN/PaNET#PaNET01134",
+        "accept": "application/rdf+xml",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/latest/ontology.owl"
+    },
+    {
+        "name": "PaNET latest: IRI, Turtle",
+        "description": "The Turtle description of an IRI within the latest release of PaNET.",
+        "source_url": "/PaN/PaNET#PaNET01134",
+        "accept": "text/turtle",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/latest/ontology.ttl"
+    },
+    {
+        "name": "PaNET latest: IRI, N3",
+        "description": "The Notation3 description of an IRI within the latest release of PaNET.",
+        "source_url": "/PaN/PaNET#PaNET01134",
+        "accept": "text/n3",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/latest/ontology.n3"
+    },
+    {
+        "name": "PaNET latest: IRI, JSON-LD",
+        "description": "The JSON Linked Data description of an IRI within the latest release of PaNET.",
+        "source_url": "/PaN/PaNET#PaNET01134",
+        "accept": "application/ld+json",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/latest/ontology.jsonld"
+    },
+
+
+    {
+        "name": "PaNET version: download RDF/XML",
+        "description": "Download an RDF/XML description of PaNET v1.2.0.",
+        "source_url": "/PaN/PaNET/1.2.0/PaNET.owl",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/1.2.0/ontology.owl"
+    },
+    {
+        "name": "PaNET version: download RDF/XML (reasoned)",
+        "description": "Download an RDF/XML description of PaNET v1.2.0 the includes inferred axions.",
+        "source_url": "/PaN/PaNET/1.2.0/PaNET_reasoned.owl",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/1.2.0/ontology_reasoned.owl"
+    },
+    {
+        "name": "PaNET version: download Turtle",
+        "description": "Download a Turtle description of PaNET v1.2.0.",
+        "source_url": "/PaN/PaNET/1.2.0/PaNET.ttl",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/1.2.0/ontology.ttl"
+    },
+    {
+        "name": "PaNET version: download N3",
+        "description": "Download a Notation3 description of PaNET v1.2.0.",
+        "source_url": "/PaN/PaNET/1.2.0/PaNET.n3",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/1.2.0/ontology.n3"
+    },
+    {
+        "name": "PaNET version: download JSON-LD",
+        "description": "Download a JSON Linked Data description of PaNET v1.2.0.",
+        "source_url": "/PaN/PaNET/1.2.0/PaNET.jsonld",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/1.2.0/ontology.jsonld"
+    },
+
+    {
+        "name": "PaNET version: docs",
+        "description": "The documentation for PaNET v1.2.0",
+        "source_url": "/PaN/PaNET/1.2.0",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/1.2.0/index-en.html"
+    },
+    {
+        "name": "PaNET version: docs, with slash",
+        "description": "The documentation for PaNET v1.2.0, with trailing slash",
+        "source_url": "/PaN/PaNET/1.2.0/",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/1.2.0/index-en.html"
+    },
+
+    {
+        "name": "PaNET version: IRI, RDF/XML",
+        "description": "The RDF/XML description of an IRI within PaNET v1.2.0.",
+        "source_url": "/PaN/PaNET/1.2.0#PaNET01134",
+        "accept": "application/rdf+xml",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/1.2.0/ontology.owl"
+    },
+    {
+        "name": "PaNET version: IRI, Turtle",
+        "description": "The Turtle description of an IRI within PaNET v1.2.0.",
+        "source_url": "/PaN/PaNET/1.2.0#PaNET01134",
+        "accept": "text/turtle",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/1.2.0/ontology.ttl"
+    },
+    {
+        "name": "PaNET version: IRI, N3",
+        "description": "The Notation3 description of an IRI within PaNET v1.2.0.",
+        "source_url": "/PaN/PaNET/1.2.0#PaNET01134",
+        "accept": "text/n3",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/1.2.0/ontology.n3"
+    },
+    {
+        "name": "PaNET version: IRI, JSON-LD",
+        "description": "The JSON Linked Data description of an IRI within PaNET v1.2.0.",
+        "source_url": "/PaN/PaNET/1.2.0#PaNET01134",
+        "accept": "application/ld+json",
+        "expected_status": 307,
+        "expected_location": "https://pan-ontologies.github.io/PaNET/1.2.0/ontology.jsonld"
+    }
+]

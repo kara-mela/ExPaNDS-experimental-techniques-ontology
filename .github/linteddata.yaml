@@ -7,6 +7,5 @@ checks:
     MissingDescriptionCheck: false
     MissingLabelCheck: false
   OWL:
-    FileExtensionInIriCheck: false
     OntologyIriOboConformanceCheck: false
     SynonymsAsClassesCheck: false

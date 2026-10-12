@@ -4,11 +4,9 @@ checks:
     NamespaceHijackingCheck: false
     SeparatorOmittedInNamespaceCheck: false
   RDFS:
-    UnconnectedClassCheck: false
     MissingDescriptionCheck: false
     MissingLabelCheck: false
   OWL:
     FileExtensionInIriCheck: false
     OntologyIriOboConformanceCheck: false
     SynonymsAsClassesCheck: false
-    UnconnectedClassCheck: false

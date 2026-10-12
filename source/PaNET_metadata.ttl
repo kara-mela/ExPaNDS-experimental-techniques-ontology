@@ -20,6 +20,7 @@ dcterms:title rdfs:label "Title"@en .
 foaf:homepage rdfs:label "Homepage"@en .
 
 foaf:name rdfs:label "Name"@en .
+foaf:name rdfs:domain foaf:Person .
 
 foaf:Person rdfs:label "Person"@en .
 
